@@ -89,11 +89,4 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-
-          - task: AzureRmWebAppDeployment@4
-            inputs:
-              ConnectionType: 'AzureRM'
-              appType: 'webApp'
-              WebAppName: 'testpythonpipeline'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
               AppSettings: '-SCM_DO_BUILD_DURING_DEPLOYMENT true'
