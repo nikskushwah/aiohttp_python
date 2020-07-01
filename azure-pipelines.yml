@@ -5,7 +5,7 @@
     appType: 'webApp'
     WebAppName: 
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    AppSettings: 'SCM_DO_BUILD_DURING_DEPLOYMENT "true"'
+    AppSettings: '- SCM_DO_BUILD_DURING_DEPLOYMENT "true"'
 # Build your Python project and deploy it to Azure as a Linux Web App.
 # Change python version to one thats appropriate for your application.
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
