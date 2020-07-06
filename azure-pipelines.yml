@@ -90,3 +90,5 @@ stages:
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               AppSettings: '-SCM_DO_BUILD_DURING_DEPLOYMENT true'
+              ScriptType: 'File Path'
+              ScriptPath: 'D:\home\site\wwwroot\requirements.txt'
